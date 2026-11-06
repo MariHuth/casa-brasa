@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Segurança (CSP): só permite arquivos do próprio site. Bloqueia scripts e estilos externos. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+  <title>Casa Brasa | Pastéis, xis e pizzas no forno à lenha</title>
+  <meta name="description" content="Casa Brasa: pastéis artesanais, xis e pizzas no forno à lenha. Site fictício para estudo.">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <!-- Acessibilidade: quem usa teclado pula direto para o conteúdo -->
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topo">
+    <a class="marca" href="#inicio" aria-label="Casa Brasa, ir para o início">
+      <img src="images/logo.svg" alt="" width="40" height="40">
+      <span>Casa Brasa</span>
+    </a>
+    <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav id="menu" class="menu" aria-label="Principal">
+      <a href="#cardapio">Cardápio</a>
+      <a href="#historia">Nossa história</a>
+      <a href="#novidades">Novidades</a>
+      <a href="#reservas">Reservas</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <!-- INÍCIO -->
+    <section id="inicio" class="hero">
+      <div class="hero-texto">
+        <h1>Massa feita hoje, forno aceso desde cedo.</h1>
+        <p>Pastéis crocantes, xis generosos e pizzas assadas na lenha. Tradição de família, servida do jeito que você gosta.</p>
+        <div class="botoes">
+          <a class="botao" data-whats="Olá! Quero fazer um pedido na Casa Brasa." href="#contato">Pedir pelo WhatsApp</a>
+          <a class="botao botao-claro" href="#cardapio">Ver cardápio</a>
+        </div>
+      </div>
+      <img class="hero-img" src="images/hero.svg" alt="Ilustração de um forno a lenha com fogo aceso" width="480" height="480">
+    </section>
+
+    <!-- CARDÁPIO -->
+    <section id="cardapio" class="secao">
+      <h2>Cardápio</h2>
+      <p class="intro">Escolha uma categoria. Preços fictícios, só para estudo.</p>
+
+      <div class="filtros" role="group" aria-label="Filtrar cardápio por categoria">
+        <button type="button" class="filtro ativo" data-filtro="todos" aria-pressed="true">Todos</button>
+        <button type="button" class="filtro" data-filtro="pastel" aria-pressed="false">Pastéis</button>
+        <button type="button" class="filtro" data-filtro="xis" aria-pressed="false">Xis</button>
+        <button type="button" class="filtro" data-filtro="pizza" aria-pressed="false">Pizzas</button>
+        <button type="button" class="filtro" data-filtro="bebida" aria-pressed="false">Bebidas</button>
+      </div>
+
+      <ul class="lista-cardapio">
+        <li class="item" data-categoria="pastel"><h3>Pastel de carne com queijo</h3><p>Carne moída temperada e queijo derretido.</p><span class="preco">R$ 14,00</span><a class="pedir" data-whats="Olá! Quero pedir: Pastel de carne com queijo." href="#contato">Pedir</a></li>
+        <li class="item" data-categoria="pastel"><h3>Pastel de frango cremoso</h3><p>Frango desfiado com catupiry caseiro.</p><span class="preco">R$ 15,00</span><a class="pedir" data-whats="Olá! Quero pedir: Pastel de frango cremoso." href="#contato">Pedir</a></li>
+        <li class="item" data-categoria="pastel"><h3>Pastel de chocolate com morango</h3><p>Para fechar a refeição com doce.</p><span class="preco">R$ 16,00</span><a class="pedir" data-whats="Olá! Quero pedir: Pastel de chocolate com morango." href="#contato">Pedir</a></li>
+        <li class="item" data-categoria="xis"><h3>Xis Salada</h3><p>Hambúrguer, presunto, queijo, ovo e salada.</p><span class="preco">R$ 28,00</span><a class="pedir" data-whats="Olá! Quero pedir: Xis Salada." href="#contato">Pedir</a></li>
+        <li class="item" data-categoria="xis"><h3>Xis Bacon</h3><p>Dobro de bacon crocante e queijo.</p><span class="preco">R$ 32,00</span><a class="pedir" data-whats="Olá! Quero pedir: Xis Bacon." href="#contato">Pedir</a></li>
+        <li class="item" data-categoria="xis"><h3>Xis Calabresa</h3><p>Calabresa fatiada, queijo e tomate.</p><span class="preco">R$ 30,00</span><a class="pedir" data-whats="Olá! Quero pedir: Xis Calabresa." href="#contato">Pedir</a></li>
+        <li class="item" data-categoria="pizza"><h3>Pizza Margherita</h3><p>Molho de tomate, muçarela e manjericão.</p><span class="preco">R$ 49,00</span><a class="pedir" data-whats="Olá! Quero pedir: Pizza Margherita." href="#contato">Pedir</a></li>
+        <li class="item" data-categoria="pizza"><h3>Pizza Calabresa</h3><p>Calabresa, cebola e azeitonas.</p><span class="preco">R$ 52,00</span><a class="pedir" data-whats="Olá! Quero pedir: Pizza Calabresa." href="#contato">Pedir</a></li>
+        <li class="item" data-categoria="pizza"><h3>Pizza de morango com chocolate</h3><p>Doce, com chocolate ao leite e morangos frescos.</p><span class="preco">R$ 55,00</span><a class="pedir" data-whats="Olá! Quero pedir: Pizza de morango com chocolate." href="#contato">Pedir</a></li>
+        <li class="item" data-categoria="bebida"><h3>Refrigerante lata</h3><p>350 ml, gelado.</p><span class="preco">R$ 6,00</span><a class="pedir" data-whats="Olá! Quero pedir: Refrigerante lata." href="#contato">Pedir</a></li>
+        <li class="item" data-categoria="bebida"><h3>Suco natural</h3><p>Laranja ou limão, 400 ml.</p><span class="preco">R$ 9,00</span><a class="pedir" data-whats="Olá! Quero pedir: Suco natural." href="#contato">Pedir</a></li>
+      </ul>
+    </section>
+
+    <!-- HISTÓRIA -->
+    <section id="historia" class="secao escura">
+      <h2>Nossa história</h2>
+      <p>A Casa Brasa começou como uma cozinha pequena e um forno a lenha. A massa é feita a cada manhã, sem pressa, e os recheios seguem receitas que passam de geração em geração.</p>
+      <p>Hoje a casa tem dois salões, mas o princípio é o mesmo: ingrediente bom, fogo de verdade e atendimento de vizinho.</p>
+    </section>
+
+    <!-- NOVIDADES -->
+    <section id="novidades" class="secao">
+      <h2>Novidades e promoções</h2>
+      <div class="cards">
+        <article class="card"><h3>Dia da Pizza</h3><p>Em pedidos de pizza acima de R$ 100, ganhe R$ 15 de desconto no próximo pedido.</p></article>
+        <article class="card"><h3>Especial Dia das Mães</h3><p>Jantar com ambiente decorado e uma surpresa para as mães, das 17h30 às 23h.</p></article>
+        <article class="card"><h3>Pausa para ajustes</h3><p>Avisos de fechamento e retorno sempre aparecem aqui. Fique de olho.</p></article>
+      </div>
+    </section>
+
+    <!-- RESERVAS -->
+    <section id="reservas" class="secao claro">
+      <h2>Reservas e ambiente</h2>
+      <p class="intro">Vai reunir a turma? Temos dois salões com clima diferente.</p>
+      <div class="cards">
+        <article class="card"><h3>Salão do Forno</h3><p>Mais animado, com vista para o forno a lenha. Bom para grupos grandes.</p></article>
+        <article class="card"><h3>Salão do Jardim</h3><p>Mais calmo, com plantas e luz suave. Bom para conversas e casais.</p></article>
+      </div>
+      <p><a class="botao" data-whats="Olá! Quero reservar uma mesa na Casa Brasa." href="#contato">Reservar pelo WhatsApp</a></p>
+    </section>
+
+    <!-- GALERIA -->
+    <section id="galeria" class="secao">
+      <h2>Galeria</h2>
+      <ul class="galeria">
+        <li><img src="images/galeria-1.svg" alt="Ilustração de uma pizza de calabresa" width="300" height="300" loading="lazy"></li>
+        <li><img src="images/galeria-2.svg" alt="Ilustração de um pastel cortado ao meio" width="300" height="300" loading="lazy"></li>
+        <li><img src="images/galeria-3.svg" alt="Ilustração de um xis com várias camadas" width="300" height="300" loading="lazy"></li>
+        <li><img src="images/galeria-4.svg" alt="Ilustração de massa sendo aberta com rolo" width="300" height="300" loading="lazy"></li>
+      </ul>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="secao escura centro">
+      <h2>Faça seu pedido</h2>
+      <p>Chame no WhatsApp e responderemos o mais rápido possível.</p>
+      <a class="botao" data-whats="Olá! Vim pelo site da Casa Brasa." href="#contato">Falar no WhatsApp</a>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div>
+      <h2>Casa Brasa</h2>
+      <p>Pastéis, xis e pizzas no forno à lenha.</p>
+      <p>Rua das Palmeiras, 123, Cidade Exemplo, RS</p>
+    </div>
+    <div>
+      <h2>Horários</h2>
+      <p>Ter a qui: 17h30 às 23h</p>
+      <p>Sex a dom: 17h30 às 00h</p>
+      <p>Segunda: fechado</p>
+    </div>
+    <div>
+      <h2>Contato</h2>
+      <p>Telefone: (00) 90000-0000</p>
+      <p>Instagram: @casabrasa.exemplo</p>
+    </div>
+    <p class="copy">© <span id="ano">2026</span> Casa Brasa. Site fictício para estudo, sem dados reais.</p>
+  </footer>
+</body>
+</html>
